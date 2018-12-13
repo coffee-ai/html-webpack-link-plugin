@@ -1,11 +1,11 @@
 # html-webpack-link-plugin
 
 ## Installation
-
+```shell
 npm install html-webpack-link-plugin -D
-
+```
 ## Usage
-
+```js
 const HtmlWebpackLinkPlugin = require('html-webpack-link-plugin')
 
 module.exports = {
@@ -17,3 +17,4 @@ module.exports = {
     })
   ]
 }
+```
