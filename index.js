@@ -9,18 +9,18 @@ class HtmlWebpackLinkPlugin {
         const {js = [], css = [], before = true} = this.option;
         if (before) {
           data.assets.js = [
-            js.map(this.getSrc),
+            ...js.map(this.getSrc),
             ...(data.assets.js || []),
           ];
         } else {
           data.assets.js = [
             ...(data.assets.js || []),
-            js.map(this.getSrc),
+            ...js.map(this.getSrc),
           ];
         }
         data.assets.css = [
           ...(data.assets.css || []),
-          css.map(this.getSrc),
+          ...css.map(this.getSrc),
         ];
         cb(null, data);
       })
